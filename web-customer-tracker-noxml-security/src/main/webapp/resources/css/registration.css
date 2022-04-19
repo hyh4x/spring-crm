@@ -1,0 +1,23 @@
+
+table {   
+	border-collapse:collapse;
+	border-bottom:1px solid gray;
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	width: 400px;
+	line-height: 40px;
+}
+ 
+th {
+	border-bottom:1px solid gray;
+	background:none repeat scroll 0 0 #0932c3;
+	padding:10px;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+
+.failed {
+	color: #FF0033;
+	line-height: 15px;
+	font-weight: bold;
+}
