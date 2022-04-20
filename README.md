@@ -1,5 +1,5 @@
 # spring-crm
-CRM project developed with Spring MVC, JSTL, Spring Security, PostgreSQL
+CRM project developed with Spring MVC, JSP, Spring Security, PostgreSQL
 
 It uses two databases: 
 - *web_customer_tracker* for holding customer information
