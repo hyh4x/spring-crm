@@ -1,23 +1,30 @@
-
-table {   
-	border-collapse:collapse;
-	border-bottom:1px solid gray;
-	font-family: Tahoma,Verdana,Segoe,sans-serif;
-	width: 400px;
-	line-height: 40px;
-}
- 
-th {
-	border-bottom:1px solid gray;
-	background:none repeat scroll 0 0 #0932c3;
-	padding:10px;
-	color: #FFFFFF;
-	text-align: center;
+html, body{
+	padding:0px; 
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	min-width: 950px;
+	background: #CCC;
 }
 
+.wrapper {
+	background: #CCC;
+}
 
 .failed {
 	color: #FF0033;
 	line-height: 15px;
 	font-weight: bold;
+}
+
+.form-area {
+	color: #BBB;
+	max-width: 700px;
+}
+
+.form-area input {
+	width: 100%;
+}
+
+.form-area button {
+	width: 50%;
+	min-width: 120px;
 }
