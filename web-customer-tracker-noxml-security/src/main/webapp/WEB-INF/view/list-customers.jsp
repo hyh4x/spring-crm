@@ -40,9 +40,11 @@
 						<b>SEARCH FOR CUSTOMER:</b><input type="text" name="searchName" class="mx-2"/>
 						<input type="submit" value="Search" class="btn btn-secondary my-2" />
 					</form:form>
-					<input type="button" value="Add Customer" 
-						onclick="window.location.href='showFormForAdd'; return false;"
-						class="btn btn-secondary my-2 mx-2" />
+					<sec:authorize access="hasAnyRole('ROLE_MANAGER', 'ROLE_ADMIN')">
+						<input type="button" value="Add Customer" 
+							onclick="window.location.href='showFormForAdd'; return false;"
+							class="btn btn-secondary my-2 mx-2" />
+					</sec:authorize>
 				</div>
 			<table class="table table-bordered table-dark table-striped">
 				<c:url var="sortLinkFirstName" value="/customer/list">
@@ -77,10 +79,16 @@
 						<td> ${tempCustomer.firstName} </td>
 						<td> ${tempCustomer.lastName} </td>
 						<td> ${tempCustomer.email} </td>
-						<td> <a href = "${updateLink}" class="btn btn-primary">Update</a>
-							|
-							<a href = "${deleteLink}" class="btn btn-danger"
-							   onclick = "if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a></td>
+						<td> 
+							<sec:authorize access="hasAnyRole('ROLE_MANAGER', 'ROLE_ADMIN')">
+								<a href = "${updateLink}" class="btn btn-primary">Update</a>
+							</sec:authorize>
+							<sec:authorize access="hasRole('ROLE_ADMIN')">
+								|
+								<a href = "${deleteLink}" class="btn btn-danger"
+								   onclick = "if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a>
+							</sec:authorize>
+						</td>
 					</tr>
 				</c:forEach>
 				
