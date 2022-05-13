@@ -98,9 +98,6 @@ ALTER TABLE ONLY public.customer
 -- Name: TABLE customer; Type: ACL; Schema: public; Owner: postgres
 --
 
-GRANT ALL ON TABLE public.customer TO springstudent;
-
-
 --
 -- PostgreSQL database dump complete
 --
